@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+/* Global Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.5; background: #f5f6fa; color: #2f3542; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: #2f80ed; text-decoration: none; }
+a:hover { opacity: .85; }
+
+.portal-container { display: flex; justify-content: center; align-items: center; min-height: 60vh; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.5rem; }
+.portal-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 1.4rem 1rem; text-align: center; width: min(280px, 100%); transition: transform .3s ease, box-shadow .3s ease; border: 1px solid #e4e9f2; }
+.portal-card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+.portal-card h2 { margin: 0 0 .55rem; color: #2f3c52; font-size: 1.1rem; }
+.portal-card p { color: #616f88; margin-bottom: .75rem; font-size: .95rem; }
+
+.btn, .btn-primary, .button { display: inline-block; background: #1e90ff; color: #fff; padding: .6rem 1rem; text-decoration: none; border-radius: 8px; font-weight: 700; border: 1px solid #1a7cd6; transition: background .2s ease, transform .2s ease; }
+.btn:hover, .btn-primary:hover, .button:hover { background: #1878cc; transform: translateY(-1px); }
+.btn-secondary { background: #f1f4f9; color: #2a3345; border: 1px solid #d8e1ef; }
+.btn-secondary:hover { background: #e2e7f4; }
+
+.container { width: min(80%); margin: 0 auto; padding: 1rem 0 2rem; }
+
+.form-row { display: grid; gap: .75rem; margin-bottom: 1rem; }
+.form-row.two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+label { display: block; margin-bottom: .35rem; font-weight: 600; color: #3b4c6b; }
+input, select, textarea, button { width: 100%; border: 1px solid #c3cad8; border-radius: 8px; padding: .62rem .75rem; background: #fff; font-size: .97rem; color: #1f2a44; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: #1e90ff; box-shadow: 0 0 0 3px rgba(30,144,255,.18); }
+button { cursor: pointer; font-weight: 700; transition: transform .15s ease, background .15s ease; }
+button[type=submit], .btn-primary { background: #1e90ff; color: #fff; border: 1px solid #1c86ee; }
+button[type=submit]:hover, .btn-primary:hover { background: #187bcd; transform: translateY(-1px); }
+
+.table-responsive { overflow-x: auto; margin-top: 1rem; }
+table { width: 100%; border-collapse: collapse; min-width: 620px; }
+th, td { border: 1px solid #e2e6ed; padding: .72rem .8rem; text-align: left; font-size: .92rem; }
+th { background: #f7f9fc; color: #2b3a50; font-weight: 700; }
+tr:nth-child(even) { background: #fbfcfe; }
+
+.form-messages { margin-bottom: 1rem; padding: .72rem .8rem; border-radius: 8px; }
+.form-messages.success { background: #d9f6e2; color: #116a3d; border: 1px solid #8cd1a4; }
+.form-messages.error { background: #ffe7e7; color: #9a1b1b; border: 1px solid #e39999; }
+
+.footer { text-align: center; margin: 1rem 0 .5rem; color: #ffffff; font-size: .87rem; }
+
+.login-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    border: 1px solid #e6e9ef;
+    padding: 2rem;
+    width: min(400px, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 300px;
+    justify-content: center;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 0;
+}
+
+.login-container .error {
+    background: #ffe7e7;
+    color: #9a1b1b;
+    padding: .72rem;
+    border-radius: 8px;
+    border: 1px solid #e39999;
+    text-align: center;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background:linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+
+}
+
+.login-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .login-container {
+        padding: 1.5rem;
+        width: 100%;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 900px) {
+  .form-row.two-col { grid-template-columns: 1fr; }
+  .container { width: 100%; padding: .8rem 0 1.5rem; }
+}
+
+.dashboard-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    border: 1px solid #e6e9ef;
+    padding: 2.5rem;
+    width: min(800px, 90%);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.dashboard-container h1 {
+    color: #0f172a;
+    margin: 0;
+}
+
+.dashboard-container nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.dashboard-container a {
+    background: #1e90ff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.dashboard-container a:hover {
+    background: #187bcd;
+}
+
+/* Admin Dashboard Layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.sidebar-nav {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border-left-color: #3b82f6;
+}
+
+.logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 260px;
+    min-height: 100vh;
+}
+
+#content-frame {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    display: block;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 101;
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Collapsible sidebar */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed .sidebar-header h2 {
+    font-size: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .nav-link {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0;
+}
+
+.sidebar.collapsed .nav-link::before {
+    content: attr(data-icon);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.main-content.sidebar-collapsed {
+    margin-left: 60px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .admin-layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-container {
+        width: 100%;
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+    
+    .container { width: 100%; margin: 0; padding: .6rem .6rem 1rem; }
+    .portal-container { min-height: auto; gap: .8rem; }
+    .portal-card { width: 100%; padding: 1rem; }
+    .footer { margin-top: 1.5rem; }
+    
+    th, td { padding: .58rem .6rem; font-size: .84rem; }
+}
